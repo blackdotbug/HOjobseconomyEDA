@@ -2,12 +2,13 @@ library(ggplot2)
 library(scales)
 library(plyr)
 library(RColorBrewer)
-ORCountyEmploymentEarningsPayroll <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/ORCountyEmploymentEarningsPayroll.csv")
+ORCountyEmpEarnPayIndustryByRace <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/ORCountyEmpEarnPayIndustryByRace.csv")
+ORCountyEmpEarnPayIndustryByGender <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/ORCountyEmpEarnPayIndustryByGender.csv")
 lowincomeworkers <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/lowincomeworkers.csv")
 
 lowincomeworkers$stat5count <- as.numeric(lowincomeworkers$stat5count)
 lowincomeworkers$stat35count <- as.numeric(lowincomeworkers$stat25count)
-lowincomecounties <- lowincomeworkers[2:36,]
+lowincomecounties <- lowincomeworkers[2:37,]
 
 plot1 <- ggplot(lowincomecounties) +
          geom_bar(aes(reorder(lowincomecounties$county,lowincomecounties$stat35share), lowincomecounties$stat5share, fill=lowincomecounties$stat34label), stat="identity") +
@@ -176,22 +177,69 @@ plot6 <- ggplot(allindustries,aes(x = county, y = share, fill = label, order = l
 print(plot6)
 ggsave("industryshare.pdf", plot6, scale=2)
 
-ORCountyEmploymentEarningsPayroll$yearQ <- paste(ORCountyEmploymentEarningsPayroll$year, "Q", ORCountyEmploymentEarningsPayroll$quarter, sep="")
-ORCountyEmploymentEarningsPayroll$raceEthnicity <- paste(ORCountyEmploymentEarningsPayroll$race, ORCountyEmploymentEarningsPayroll$ethnicity, sep="")
-ORCountyEmploymentEarningsPayroll$raceEthnicity_label <- paste(ORCountyEmploymentEarningsPayroll$race_label.value, ORCountyEmploymentEarningsPayroll$ethnicity_label.value)
-splitIndustry <- split(ORCountyEmploymentEarningsPayroll, ORCountyEmploymentEarningsPayroll$industry)
-timeindustry1 <- splitIndustry[[1]]
-splitAllIndustriesCounty <- split(timeindustry1, timeindustry1$geography)
-statewide <- splitAllIndustriesCounty[[1]]
-baker <- splitAllIndustriesCounty[[2]]
-splitYear <- split(statewide, statewide$year)
+ORCountyEmpEarnPayIndustryByRace$yearQ <- paste(ORCountyEmpEarnPayIndustryByRace$year, "Q", ORCountyEmpEarnPayIndustryByRace$quarter, sep="")
+ORCountyEmpEarnPayIndustryByRace$raceEthnicity <- paste(ORCountyEmpEarnPayIndustryByRace$race, ORCountyEmpEarnPayIndustryByRace$ethnicity, sep="")
+ORCountyEmpEarnPayIndustryByRace$raceEthnicity_label <- paste(ORCountyEmpEarnPayIndustryByRace$race_label.value, ORCountyEmpEarnPayIndustryByRace$ethnicity_label.value)
+splitIndustryRace <- split(ORCountyEmpEarnPayIndustryByRace, ORCountyEmpEarnPayIndustryByRace$industry)
+timeindustryRace1 <- splitIndustryRace[[1]]
+splitAllIndustriesCountyRace <- split(timeindustryRace1, timeindustryRace1$geography)
+statewideRace <- splitAllIndustriesCountyRace[[1]]
+bakerRace <- splitAllIndustriesCountyRace[[2]]
+splitYearRace <- split(statewideRace, statewideRace$year)
 
-year2013 <- splitYear[[9]]
-year2013 <- year2013[, c("geography", "geography_label.value", "industry", "industry_label.value", "race", "race_label.value", "ethnicity", "ethnicity_label.value", "raceEthnicity", "raceEthnicity_label", "year", "quarter", "EmpS", "EarnS", "Payroll")]
-mean2013 <- ddply(year2013, c("geography", "geography_label.value", "industry", "industry_label.value", "race", "race_label.value", "ethnicity", "ethnicity_label.value", "raceEthnicity", "raceEthnicity_label", "year"), summarise, meanEmpS = mean(EmpS), meanEarnS = mean(EarnS), meanPayroll = mean(Payroll))
-mean2013$meanPayroll <- format(mean2013$meanPayroll, scientific=FALSE)
-mean2013$StableEmploymentShare <- mean2013$meanEmpS / mean2013[1,"meanEmpS"]
+year2013Race <- splitYearRace[[9]]
+year2013Race <- year2013Race[, c("geography", "geography_label.value", "industry", "industry_label.value", "race", "race_label.value", "ethnicity", "ethnicity_label.value", "raceEthnicity", "raceEthnicity_label", "year", "quarter", "EmpS", "EarnS", "Payroll")]
+mean2013Race <- ddply(year2013Race, c("geography", "geography_label.value", "industry", "industry_label.value", "race", "race_label.value", "ethnicity", "ethnicity_label.value", "raceEthnicity", "raceEthnicity_label", "year"), summarise, meanEmpS = mean(EmpS), meanEarnS = mean(EarnS), meanPayroll = mean(Payroll))
+mean2013Race$meanPayroll <- format(mean2013Race$meanPayroll, scientific=FALSE)
+mean2013Race$StableEmploymentShare <- mean2013Race$meanEmpS / mean2013Race[1,"meanEmpS"]
 palette21 <- c(palette, "#000000")
-plot7 <- ggplot(mean2013) + geom_bar(aes(reorder(raceEthnicity,StableEmploymentShare), StableEmploymentShare, fill=raceEthnicity_label, group=raceEthnicity), stat="identity") + scale_fill_manual(values=palette21) + labs(x="", y="Share of Stable Employment Statewide 2013") + theme(legend.title=element_blank(), axis.ticks = element_blank(), panel.background = element_blank(), axis.text.x = element_blank()) + scale_y_continuous(labels = percent_format()) + geom_text(aes(reorder(raceEthnicity,StableEmploymentShare), StableEmploymentShare, label=sprintf("%1.1f%%", 100*StableEmploymentShare), angle=45, vjust=-.125, hjust=.1))
+plot7 <- ggplot(mean2013Race) + geom_bar(aes(reorder(raceEthnicity,StableEmploymentShare), StableEmploymentShare, fill=raceEthnicity_label, group=raceEthnicity), stat="identity") + scale_fill_manual(values=palette21) + labs(x="", y="Share of Stable Employment Statewide 2013") + theme(legend.title=element_blank(), axis.ticks = element_blank(), panel.background = element_blank(), axis.text.x = element_blank()) + scale_y_continuous(labels = percent_format()) + geom_text(aes(reorder(raceEthnicity,StableEmploymentShare), StableEmploymentShare, label=sprintf("%1.1f%%", 100*StableEmploymentShare), angle=45, vjust=-.125, hjust=.1))
 print(plot7)
 ggsave("RaceShareStableEmploymentStatewide.pdf", plot7, scale=2)
+
+ORCountyEmpEarnPayIndustryByGender <- ORCountyEmpEarnPayIndustryByGender[, c("geography", "geography_label.value", "industry", "industry_label.value", "sex", "sex_label.value", "year", "quarter", "EmpS", "EarnS", "Payroll")]
+mean2013Gender <- ddply(ORCountyEmpEarnPayIndustryByGender, c("geography", "geography_label.value", "industry", "industry_label.value", "sex", "sex_label.value", "year"), summarise, meanEmpS = mean(EmpS), meanEarnS = mean(EarnS), meanPayroll = mean(Payroll))
+mean2013Gender$meanPayroll <- format(mean2013Gender$meanPayroll, scientific=FALSE)
+mean2013Gender$StableEmploymentShare <- mean2013Gender$meanEmpS / mean2013Gender[1,"meanEmpS"]
+
+splitIndustryGender <- split(mean2013Gender, mean2013Gender$industry)
+industryGender1 <- splitIndustryGender[[1]]
+splitAllIndustriesCountyGender <- split(industryGender1, industryGender1$geography)
+statewideGender <- splitAllIndustriesCountyGender[[1]]
+statewideGender$plot_label <- paste(sprintf("%1.1f%%", 100*statewideGender$StableEmploymentShare), statewideGender$sex_label.value)
+plot8 <- ggplot(statewideGender[2:3,],aes(x = geography, y = StableEmploymentShare, fill = sex_label.value, order = sex)) +
+  geom_bar(position = "stack",stat = "identity") +
+  labs(x="", y="Share of Stable Employment Statewide 2013") +
+  theme(legend.title=element_blank(), axis.ticks = element_blank(), panel.background = element_blank(), axis.text.x = element_blank()) +
+  scale_y_continuous(labels = percent_format()) +
+  geom_text(aes(statewideGender[2,]$geography, statewideGender[2,]$StableEmploymentShare), label=statewideGender[2,]$plot_label, vjust=2.5) +
+  geom_text(aes(statewideGender[3,]$geography, statewideGender[3,]$StableEmploymentShare), label=statewideGender[3,]$plot_label, vjust=-2.5) +
+  scale_fill_discrete(guide=FALSE)
+print(plot8)
+ggsave("GenderShareStableEmployment2013.pdf", plot8)
+
+mean2013CountyGender <- mean2013Gender[ which(mean2013Gender$industry == "00"),]
+mean2013CountyGenderShare <- ddply(mean2013CountyGender, c("geography"), mutate, county_share = meanEmpS / max(meanEmpS))
+mean2013CountyGenderShare <- mean2013CountyGenderShare[ which(mean2013CountyGenderShare$sex > 0),]
+womenCountyShare <- mean2013CountyGenderShare[ which(mean2013CountyGenderShare$sex == "2"),c("geography_label.value","county_share")]
+womenCountyShare <- womenCountyShare[2:37,]
+lowincomecounties1 <- lowincomecounties[,c("county", "stat35share", "stat35label")]
+lowincomecounties2 <- lowincomecounties[,c("county", "stat34share", "stat34label")]
+names(lowincomecounties1)[2]<-"share"
+names(lowincomecounties1)[3]<-"label"
+names(lowincomecounties2)[2]<-"share"
+names(lowincomecounties2)[3]<-"label"
+lowincomecountiesGender <- rbind.fill(lowincomecounties1, lowincomecounties2)
+
+
+plot9 <- ggplot(lowincomecountiesGender) +
+  geom_bar(aes(lowincomecountiesGender$county, lowincomecountiesGender$share, fill=lowincomecountiesGender$label), stat="identity", position="fill") +
+  geom_point(data=womenCountyShare, aes(womenCountyShare$geography_label.value, womenCountyShare$county_share), position="identity" stat="identity") +
+  labs(x="Share of Jobs earning $1,250 per month or less", y="") +
+  theme(legend.title=element_blank(), axis.text.x = element_text(angle=90), axis.ticks = element_blank(), panel.background = element_blank()) +
+  scale_y_continuous(labels=percent_format()) +
+  geom_text(data=womenCountyShare, aes(womenCountyShare$geography_label.value, womenCountyShare$county_share),label=womenCountyShare$geography_label.value)
+print(plot9)
+
+geom_text(aes(reorder(lowincomecounties$county,lowincomecounties$stat35share), lowincomecounties$stat5share, label=lowincomecounties$county, angle=90, hjust=1.05)) +
+
