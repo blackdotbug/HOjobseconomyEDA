@@ -230,16 +230,17 @@ names(lowincomecounties1)[3]<-"label"
 names(lowincomecounties2)[2]<-"share"
 names(lowincomecounties2)[3]<-"label"
 lowincomecountiesGender <- rbind.fill(lowincomecounties1, lowincomecounties2)
-
+lowincomecountiesWomen <- lowincomecountiesGender[ which(lowincomecountiesGender$label == "Female"),]
+lowincomecountiesMen <- lowincomecountiesGender[ which(lowincomecountiesGender$label == "Male"),]
 
 plot9 <- ggplot(lowincomecountiesGender) +
   geom_bar(aes(lowincomecountiesGender$county, lowincomecountiesGender$share, fill=lowincomecountiesGender$label), stat="identity", position="fill") +
-  geom_point(data=womenCountyShare, aes(womenCountyShare$geography_label.value, womenCountyShare$county_share), position="identity" stat="identity") +
-  labs(x="Share of Jobs earning $1,250 per month or less", y="") +
-  theme(legend.title=element_blank(), axis.text.x = element_text(angle=90), axis.ticks = element_blank(), panel.background = element_blank()) +
+  geom_point(data=womenCountyShare, aes(womenCountyShare$geography_label.value, womenCountyShare$county_share), position="identity", stat="identity") +
+  labs(x="", y="Share of Workers earning $1,250 per month or less") +
+  theme(legend.title=element_blank(), legend.position="top", legend.direction="horizontal", axis.text.x = element_text(angle=90), axis.text.y = element_text(angle=90), axis.ticks = element_blank(), panel.background = element_blank()) +
   scale_y_continuous(labels=percent_format()) +
-  geom_text(data=womenCountyShare, aes(womenCountyShare$geography_label.value, womenCountyShare$county_share),label=womenCountyShare$geography_label.value)
+  geom_text(data=lowincomecountiesWomen, aes(lowincomecountiesWomen$county, lowincomecountiesWomen$share, label=sprintf("%1.1f%%", 100*lowincomecountiesWomen$share), angle=90, vjust=.5, hjust=-0.15)) +
+  geom_text(data=womenCountyShare,aes(womenCountyShare$geography_label.value, womenCountyShare$county_share, label=sprintf("%1.1f%%", 100*womenCountyShare$county_share), angle=90, vjust=.5, hjust=1.15))
 print(plot9)
 
-geom_text(aes(reorder(lowincomecounties$county,lowincomecounties$stat35share), lowincomecounties$stat5share, label=lowincomecounties$county, angle=90, hjust=1.05)) +
-
+ggsave("GenderSplitofLowIncomeWorkerstoTotal.pdf", plot9, scale=2)
