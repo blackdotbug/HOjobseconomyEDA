@@ -232,15 +232,22 @@ names(lowincomecounties2)[3]<-"label"
 lowincomecountiesGender <- rbind.fill(lowincomecounties1, lowincomecounties2)
 lowincomecountiesWomen <- lowincomecountiesGender[ which(lowincomecountiesGender$label == "Female"),]
 lowincomecountiesMen <- lowincomecountiesGender[ which(lowincomecountiesGender$label == "Male"),]
+womenCountyShare$difference <- lowincomecountiesWomen$share - womenCountyShare$county_share
+lowincomecountiesWomen$difference <- womenCountyShare$difference
+gapdiff <- womenCountyShare[,c("geography_label.value","difference")]
+gapdiff <- rbind.fill(gapdiff, gapdiff)
+lowincomecountiesGender$difference <- gapdiff$difference
+lowincomecountiesGender <- lowincomecountiesGender[order(lowincomecountiesGender$difference),]
+womenCountyShare <- womenCountyShare[order(womenCountyShare$difference),]
 
 plot9 <- ggplot(lowincomecountiesGender) +
-  geom_bar(aes(lowincomecountiesGender$county, lowincomecountiesGender$share, fill=lowincomecountiesGender$label), stat="identity", position="fill") +
-  geom_point(data=womenCountyShare, aes(womenCountyShare$geography_label.value, womenCountyShare$county_share), position="identity", stat="identity") +
+  geom_bar(aes(reorder(lowincomecountiesGender$county, lowincomecountiesGender$difference), lowincomecountiesGender$share, fill=lowincomecountiesGender$label), stat="identity", position="fill") +
+  geom_point(data=womenCountyShare, aes(reorder(womenCountyShare$geography_label.value, womenCountyShare$difference), womenCountyShare$county_share), position="identity", stat="identity", shape=18) +
   labs(x="", y="Share of Workers earning $1,250 per month or less") +
   theme(legend.title=element_blank(), legend.position="top", legend.direction="horizontal", axis.text.x = element_text(angle=90), axis.text.y = element_text(angle=90), axis.ticks = element_blank(), panel.background = element_blank()) +
   scale_y_continuous(labels=percent_format()) +
-  geom_text(data=lowincomecountiesWomen, aes(lowincomecountiesWomen$county, lowincomecountiesWomen$share, label=sprintf("%1.1f%%", 100*lowincomecountiesWomen$share), angle=90, vjust=.5, hjust=-0.15)) +
-  geom_text(data=womenCountyShare,aes(womenCountyShare$geography_label.value, womenCountyShare$county_share, label=sprintf("%1.1f%%", 100*womenCountyShare$county_share), angle=90, vjust=.5, hjust=1.15))
+  geom_text(data=lowincomecountiesWomen, aes(reorder(lowincomecountiesWomen$county, lowincomecountiesWomen$difference), lowincomecountiesWomen$share, label=sprintf("%1.1f%%", 100*lowincomecountiesWomen$share), angle=90, vjust=.5, hjust=-0.15)) +
+  geom_text(data=womenCountyShare,aes(reorder(womenCountyShare$geography_label.value, womenCountyShare$difference), womenCountyShare$county_share, label=sprintf("%1.1f%%", 100*womenCountyShare$county_share), angle=90, vjust=.5, hjust=1.15))
 print(plot9)
 
 ggsave("GenderSplitofLowIncomeWorkerstoTotal.pdf", plot9, scale=2)
