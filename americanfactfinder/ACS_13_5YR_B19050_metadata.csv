@@ -1,0 +1,13 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars):
+HD02_VD01,Margin of Error; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars):
+HD01_VD02,Estimate; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder under 25 years
+HD02_VD02,Margin of Error; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder under 25 years
+HD01_VD03,Estimate; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder 25 to 44 years
+HD02_VD03,Margin of Error; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder 25 to 44 years
+HD01_VD04,Estimate; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder 45 to 64 years
+HD02_VD04,Margin of Error; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder 45 to 64 years
+HD01_VD05,Estimate; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder 65 years and over
+HD02_VD05,Margin of Error; Aggregate household income in the past 12 months (in 2013 inflation-adjusted dollars): - Householder 65 years and over

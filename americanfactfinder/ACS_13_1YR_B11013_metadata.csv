@@ -1,0 +1,15 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Married-couple subfamily:
+HD02_VD02,Margin of Error; Married-couple subfamily:
+HD01_VD03,Estimate; Married-couple subfamily: - With own children under 18 years
+HD02_VD03,Margin of Error; Married-couple subfamily: - With own children under 18 years
+HD01_VD04,Estimate; Married-couple subfamily: - No own children under 18 years
+HD02_VD04,Margin of Error; Married-couple subfamily: - No own children under 18 years
+HD01_VD05,Estimate; Mother-child subfamily
+HD02_VD05,Margin of Error; Mother-child subfamily
+HD01_VD06,Estimate; Father-child subfamily
+HD02_VD06,Margin of Error; Father-child subfamily

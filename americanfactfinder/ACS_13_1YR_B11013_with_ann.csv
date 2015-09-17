@@ -1,0 +1,10 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01,HD01_VD02,HD02_VD02,HD01_VD03,HD02_VD03,HD01_VD04,HD02_VD04,HD01_VD05,HD02_VD05,HD01_VD06,HD02_VD06
+Id,Id2,Geography,Estimate; Total:,Margin of Error; Total:,Estimate; Married-couple subfamily:,Margin of Error; Married-couple subfamily:,Estimate; Married-couple subfamily: - With own children under 18 years,Margin of Error; Married-couple subfamily: - With own children under 18 years,Estimate; Married-couple subfamily: - No own children under 18 years,Margin of Error; Married-couple subfamily: - No own children under 18 years,Estimate; Mother-child subfamily,Margin of Error; Mother-child subfamily,Estimate; Father-child subfamily,Margin of Error; Father-child subfamily
+0500000US41005,41005,"Clackamas County, Oregon",3636,899,2227,831,915,566,1312,603,1034,330,375,276
+0500000US41029,41029,"Jackson County, Oregon",2500,828,849,613,541,435,308,399,1220,581,431,270
+0500000US41033,41033,"Josephine County, Oregon",1344,638,737,469,564,416,173,208,333,243,274,355
+0500000US41039,41039,"Lane County, Oregon",2225,735,558,277,280,202,278,173,1159,571,508,283
+0500000US41047,41047,"Marion County, Oregon",2751,828,1031,450,495,307,536,311,1297,573,423,398
+0500000US41051,41051,"Multnomah County, Oregon",7492,1643,2620,982,1378,799,1242,578,3767,1127,1105,661
+0500000US41067,41067,"Washington County, Oregon",4086,968,1782,722,606,305,1176,641,1877,655,427,278
+0500000US41071,41071,"Yamhill County, Oregon",979,421,415,317,314,303,101,88,430,302,134,187

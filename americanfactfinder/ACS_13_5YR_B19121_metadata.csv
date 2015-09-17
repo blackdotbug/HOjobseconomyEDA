@@ -1,0 +1,13 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Total: - No earners (dollars)
+HD02_VD02,Margin of Error; Total: - No earners (dollars)
+HD01_VD03,Estimate; Total: - 1 earner (dollars)
+HD02_VD03,Margin of Error; Total: - 1 earner (dollars)
+HD01_VD04,Estimate; Total: - 2 earners (dollars)
+HD02_VD04,Margin of Error; Total: - 2 earners (dollars)
+HD01_VD05,Estimate; Total: - 3 or more earners (dollars)
+HD02_VD05,Margin of Error; Total: - 3 or more earners (dollars)

@@ -1,0 +1,18 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD01_VD03,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - No income imputed
+HD01_VD04,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - Dollar value of zero imputed
+HD01_VD05,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - More than 0 to less than 10 percent of total income for individual imputed
+HD01_VD06,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 10 to less than 25 percent of total income for individual imputed
+HD01_VD07,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 25 to less than 50 percent of total income for individual imputed
+HD01_VD08,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 50 to less than 100 percent of total income for individual imputed
+HD01_VD09,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 100 percent of total income for individual imputed
+HD01_VD11,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - No income imputed
+HD01_VD12,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - Dollar value of zero imputed
+HD01_VD13,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - More than 0 to less than 10 percent of total income for individual imputed
+HD01_VD14,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 10 to less than 25 percent of total income for individual imputed
+HD01_VD15,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 25 to less than 50 percent of total income for individual imputed
+HD01_VD16,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 50 to less than 100 percent of total income for individual imputed
+HD01_VD17,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 100 percent of total income for individual imputed

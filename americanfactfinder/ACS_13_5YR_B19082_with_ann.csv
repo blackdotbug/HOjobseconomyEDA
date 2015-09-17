@@ -1,0 +1,38 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD02,HD02_VD02,HD01_VD03,HD02_VD03,HD01_VD04,HD02_VD04,HD01_VD05,HD02_VD05,HD01_VD06,HD02_VD06,HD01_VD07,HD02_VD07
+Id,Id2,Geography,Estimate; Quintile Share of Aggregate Income: - Lowest Quintile,Margin of Error; Quintile Share of Aggregate Income: - Lowest Quintile,Estimate; Quintile Share of Aggregate Income: - Second Quintile,Margin of Error; Quintile Share of Aggregate Income: - Second Quintile,Estimate; Quintile Share of Aggregate Income: - Third Quintile,Margin of Error; Quintile Share of Aggregate Income: - Third Quintile,Estimate; Quintile Share of Aggregate Income: - Fourth Quintile,Margin of Error; Quintile Share of Aggregate Income: - Fourth Quintile,Estimate; Quintile Share of Aggregate Income: - Highest Quintile,Margin of Error; Quintile Share of Aggregate Income: - Highest Quintile,Estimate; Top 5 Percent,Margin of Error; Top 5 Percent
+0500000US41001,41001,"Baker County, Oregon",3.70,0.45,8.96,0.70,15.78,0.76,23.30,0.94,48.26,2.09,19.70,2.50
+0500000US41003,41003,"Benton County, Oregon",2.38,0.23,7.91,0.37,14.83,0.45,24.87,0.57,50.01,1.12,20.04,1.21
+0500000US41005,41005,"Clackamas County, Oregon",3.88,0.13,9.57,0.16,15.36,0.20,22.88,0.31,48.31,0.62,21.38,0.86
+0500000US41007,41007,"Clatsop County, Oregon",4.18,0.43,9.57,0.64,14.99,0.83,23.40,1.18,47.86,2.69,20.70,3.48
+0500000US41009,41009,"Columbia County, Oregon",4.00,0.34,9.76,0.57,16.59,0.66,24.46,0.63,45.19,1.76,18.20,2.05
+0500000US41011,41011,"Coos County, Oregon",3.70,0.30,9.03,0.48,14.88,0.59,22.64,0.83,49.76,1.84,22.32,2.44
+0500000US41013,41013,"Crook County, Oregon",4.55,0.46,9.99,0.52,16.07,0.80,24.23,0.68,45.15,1.43,17.12,1.23
+0500000US41015,41015,"Curry County, Oregon",4.10,0.59,9.25,0.68,15.85,0.75,24.93,1.10,45.87,2.16,17.75,2.32
+0500000US41017,41017,"Deschutes County, Oregon",3.74,0.22,9.04,0.34,15.12,0.45,23.30,0.64,48.80,1.36,21.81,1.72
+0500000US41019,41019,"Douglas County, Oregon",4.24,0.24,9.76,0.30,15.59,0.44,23.72,0.53,46.69,1.10,19.06,1.13
+0500000US41021,41021,"Gilliam County, Oregon",4.33,0.94,10.40,1.51,16.89,1.45,24.32,1.78,44.06,4.17,17.54,5.23
+0500000US41023,41023,"Grant County, Oregon",3.80,0.59,8.52,0.76,14.04,1.04,22.78,1.20,50.85,2.77,20.17,2.57
+0500000US41025,41025,"Harney County, Oregon",4.29,0.83,10.17,0.98,15.65,1.07,23.47,1.12,46.42,2.53,17.66,1.58
+0500000US41027,41027,"Hood River County, Oregon",5.08,0.43,11.04,0.85,16.92,0.72,24.30,0.88,42.66,1.92,16.96,1.54
+0500000US41029,41029,"Jackson County, Oregon",3.72,0.20,9.22,0.28,15.19,0.34,23.32,0.38,48.55,0.96,21.03,0.97
+0500000US41031,41031,"Jefferson County, Oregon",3.88,0.67,9.91,1.07,15.24,1.35,22.10,1.84,48.87,4.47,23.52,5.89
+0500000US41033,41033,"Josephine County, Oregon",3.59,0.28,8.88,0.42,14.71,0.55,23.27,0.84,49.55,1.79,21.89,2.32
+0500000US41035,41035,"Klamath County, Oregon",3.90,0.25,9.22,0.36,15.54,0.46,24.06,0.44,47.28,1.05,18.38,0.92
+0500000US41037,41037,"Lake County, Oregon",4.02,0.74,8.67,0.89,14.33,1.50,23.50,1.64,49.49,3.83,20.62,4.60
+0500000US41039,41039,"Lane County, Oregon",3.10,0.12,8.76,0.18,15.01,0.22,23.62,0.33,49.51,0.70,21.21,0.94
+0500000US41041,41041,"Lincoln County, Oregon",3.96,0.32,9.29,0.34,15.64,0.46,24.30,0.55,46.81,1.12,18.05,1.28
+0500000US41043,41043,"Linn County, Oregon",4.14,0.22,10.34,0.31,17.00,0.30,24.89,0.39,43.63,0.77,16.27,0.79
+0500000US41045,41045,"Malheur County, Oregon",3.69,0.31,8.50,0.55,14.95,0.68,24.28,0.75,48.58,1.70,20.06,1.86
+0500000US41047,41047,"Marion County, Oregon",4.03,0.16,9.92,0.22,15.77,0.26,23.85,0.35,46.43,0.74,18.96,0.95
+0500000US41049,41049,"Morrow County, Oregon",4.69,0.53,10.41,0.74,16.31,0.76,24.00,0.87,44.59,1.95,16.28,1.85
+0500000US41051,41051,"Multnomah County, Oregon",3.04,0.08,8.51,0.14,14.65,0.15,23.17,0.26,50.63,0.46,22.61,0.62
+0500000US41053,41053,"Polk County, Oregon",3.74,0.34,9.81,0.40,16.36,0.43,24.87,0.50,45.21,1.04,17.25,1.03
+0500000US41055,41055,"Sherman County, Oregon",3.29,0.53,8.81,0.96,15.95,1.18,25.48,1.28,46.46,2.61,17.02,1.65
+0500000US41057,41057,"Tillamook County, Oregon",4.53,0.42,10.31,0.61,16.46,0.72,24.26,0.82,44.44,1.92,18.27,1.95
+0500000US41059,41059,"Umatilla County, Oregon",3.98,0.30,9.94,0.43,16.49,0.49,24.77,0.58,44.81,1.31,17.37,1.31
+0500000US41061,41061,"Union County, Oregon",3.16,0.37,8.76,0.54,15.34,0.77,23.85,0.87,48.90,2.01,20.78,2.53
+0500000US41063,41063,"Wallowa County, Oregon",3.71,0.57,9.77,0.98,16.38,0.81,24.80,1.28,45.34,2.47,16.99,2.16
+0500000US41065,41065,"Wasco County, Oregon",4.23,0.48,9.76,0.68,14.74,0.78,22.70,1.14,48.57,2.68,21.46,3.12
+0500000US41067,41067,"Washington County, Oregon",4.02,0.12,9.79,0.18,15.81,0.21,23.84,0.25,46.54,0.59,18.81,0.66
+0500000US41069,41069,"Wheeler County, Oregon",4.23,0.75,9.76,1.36,15.29,1.31,23.76,1.56,46.95,3.95,19.77,3.46
+0500000US41071,41071,"Yamhill County, Oregon",3.93,0.30,9.87,0.48,16.01,0.68,24.18,0.81,46.01,1.99,19.12,2.61

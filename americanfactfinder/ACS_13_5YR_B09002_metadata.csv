@@ -1,0 +1,43 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; In married-couple families:
+HD02_VD02,Margin of Error; In married-couple families:
+HD01_VD03,Estimate; In married-couple families: - Under 3 years
+HD02_VD03,Margin of Error; In married-couple families: - Under 3 years
+HD01_VD04,Estimate; In married-couple families: - 3 and 4 years
+HD02_VD04,Margin of Error; In married-couple families: - 3 and 4 years
+HD01_VD05,Estimate; In married-couple families: - 5 years
+HD02_VD05,Margin of Error; In married-couple families: - 5 years
+HD01_VD06,Estimate; In married-couple families: - 6 to 11 years
+HD02_VD06,Margin of Error; In married-couple families: - 6 to 11 years
+HD01_VD07,Estimate; In married-couple families: - 12 to 17 years
+HD02_VD07,Margin of Error; In married-couple families: - 12 to 17 years
+HD01_VD08,Estimate; In other families:
+HD02_VD08,Margin of Error; In other families:
+HD01_VD09,"Estimate; In other families: - Male householder, no wife present:"
+HD02_VD09,"Margin of Error; In other families: - Male householder, no wife present:"
+HD01_VD10,"Estimate; In other families: - Male householder, no wife present: - Under 3 years"
+HD02_VD10,"Margin of Error; In other families: - Male householder, no wife present: - Under 3 years"
+HD01_VD11,"Estimate; In other families: - Male householder, no wife present: - 3 and 4 years"
+HD02_VD11,"Margin of Error; In other families: - Male householder, no wife present: - 3 and 4 years"
+HD01_VD12,"Estimate; In other families: - Male householder, no wife present: - 5 years"
+HD02_VD12,"Margin of Error; In other families: - Male householder, no wife present: - 5 years"
+HD01_VD13,"Estimate; In other families: - Male householder, no wife present: - 6 to 11 years"
+HD02_VD13,"Margin of Error; In other families: - Male householder, no wife present: - 6 to 11 years"
+HD01_VD14,"Estimate; In other families: - Male householder, no wife present: - 12 to 17 years"
+HD02_VD14,"Margin of Error; In other families: - Male householder, no wife present: - 12 to 17 years"
+HD01_VD15,"Estimate; In other families: - Female householder, no husband present:"
+HD02_VD15,"Margin of Error; In other families: - Female householder, no husband present:"
+HD01_VD16,"Estimate; In other families: - Female householder, no husband present: - Under 3 years"
+HD02_VD16,"Margin of Error; In other families: - Female householder, no husband present: - Under 3 years"
+HD01_VD17,"Estimate; In other families: - Female householder, no husband present: - 3 and 4 years"
+HD02_VD17,"Margin of Error; In other families: - Female householder, no husband present: - 3 and 4 years"
+HD01_VD18,"Estimate; In other families: - Female householder, no husband present: - 5 years"
+HD02_VD18,"Margin of Error; In other families: - Female householder, no husband present: - 5 years"
+HD01_VD19,"Estimate; In other families: - Female householder, no husband present: - 6 to 11 years"
+HD02_VD19,"Margin of Error; In other families: - Female householder, no husband present: - 6 to 11 years"
+HD01_VD20,"Estimate; In other families: - Female householder, no husband present: - 12 to 17 years"
+HD02_VD20,"Margin of Error; In other families: - Female householder, no husband present: - 12 to 17 years"

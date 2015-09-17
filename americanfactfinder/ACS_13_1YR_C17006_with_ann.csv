@@ -1,0 +1,17 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01,HD01_VD02,HD02_VD02,HD01_VD03,HD02_VD03,HD01_VD04,HD02_VD04,HD01_VD05,HD02_VD05,HD01_VD06,HD02_VD06,HD01_VD07,HD02_VD07
+Id,Id2,Geography,Estimate; Total:,Margin of Error; Total:,Estimate; Income in the past 12 months below poverty level:,Margin of Error; Income in the past 12 months below poverty level:,Estimate; Income in the past 12 months below poverty level: - In married-couple family,Margin of Error; Income in the past 12 months below poverty level: - In married-couple family,Estimate; Income in the past 12 months below poverty level: - In other family,Margin of Error; Income in the past 12 months below poverty level: - In other family,Estimate; Income in the past 12 months at or above poverty level:,Margin of Error; Income in the past 12 months at or above poverty level:,Estimate; Income in the past 12 months at or above poverty level: - In married-couple family,Margin of Error; Income in the past 12 months at or above poverty level: - In married-couple family,Estimate; Income in the past 12 months at or above poverty level: - In other family,Margin of Error; Income in the past 12 months at or above poverty level: - In other family
+0500000US41003,41003,"Benton County, Oregon",14771,375,1658,805,1082,750,576,358,13113,871,12282,996,831,619
+0500000US41005,41005,"Clackamas County, Oregon",84314,1379,7073,1924,3514,1487,3559,1091,77241,2077,61757,3649,15484,2843
+0500000US41017,41017,"Deschutes County, Oregon",35048,972,6762,2510,3483,1828,3279,2034,28286,2595,22026,3006,6260,2004
+0500000US41019,41019,"Douglas County, Oregon",20267,761,5292,1620,1102,692,4190,1535,14975,1714,11820,2006,3155,1446
+0500000US41029,41029,"Jackson County, Oregon",43331,759,11864,3945,3580,2207,8284,3529,31467,3789,21968,2954,9499,2546
+0500000US41033,41033,"Josephine County, Oregon",15551,644,2736,1227,784,683,1952,1033,12815,1483,8560,1697,4255,1603
+0500000US41035,41035,"Klamath County, Oregon",14198,180,2414,942,948,684,1466,813,11784,877,9257,1330,2527,1084
+0500000US41039,41039,"Lane County, Oregon",66133,777,16043,3406,5916,2657,10127,2385,50090,3466,39940,3452,10150,2051
+0500000US41043,41043,"Linn County, Oregon",26791,1177,8072,2133,2164,1365,5908,1810,18719,2338,14478,2029,4241,1324
+0500000US41047,41047,"Marion County, Oregon",81294,714,24004,4227,9190,3501,14814,3528,57290,4162,45098,3873,12192,2834
+0500000US41051,41051,"Multnomah County, Oregon",147908,1636,34536,4705,12778,3505,21758,3737,113372,4306,84468,5141,28904,4291
+0500000US41053,41053,"Polk County, Oregon",17717,356,5148,1681,2310,1343,2838,1230,12569,1640,9972,1794,2597,1379
+0500000US41059,41059,"Umatilla County, Oregon",19037,667,3846,1309,832,780,3014,1198,15191,1403,10801,1538,4390,1428
+0500000US41067,41067,"Washington County, Oregon",134316,1054,18205,3319,8386,2470,9819,2485,116111,3355,96787,4425,19324,3490
+0500000US41071,41071,"Yamhill County, Oregon",23225,395,3821,1324,2289,1024,1532,917,19404,1406,14905,1883,4499,1634

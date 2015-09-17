@@ -1,0 +1,25 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Income in the past 12 months below poverty level:
+HD02_VD02,Margin of Error; Income in the past 12 months below poverty level:
+HD01_VD05,Estimate; Income in the past 12 months below poverty level: - No child
+HD02_VD05,Margin of Error; Income in the past 12 months below poverty level: - No child
+HD01_VD06,Estimate; Income in the past 12 months below poverty level: - 1 or 2 children
+HD02_VD06,Margin of Error; Income in the past 12 months below poverty level: - 1 or 2 children
+HD01_VD07,Estimate; Income in the past 12 months below poverty level: - 3 or 4 children
+HD02_VD07,Margin of Error; Income in the past 12 months below poverty level: - 3 or 4 children
+HD01_VD08,Estimate; Income in the past 12 months below poverty level: - 5 or more children
+HD02_VD08,Margin of Error; Income in the past 12 months below poverty level: - 5 or more children
+HD01_VD09,Estimate; Income in the past 12 months at or above poverty level:
+HD02_VD09,Margin of Error; Income in the past 12 months at or above poverty level:
+HD01_VD12,Estimate; Income in the past 12 months at or above poverty level: - No child
+HD02_VD12,Margin of Error; Income in the past 12 months at or above poverty level: - No child
+HD01_VD13,Estimate; Income in the past 12 months at or above poverty level: - 1 or 2 children
+HD02_VD13,Margin of Error; Income in the past 12 months at or above poverty level: - 1 or 2 children
+HD01_VD14,Estimate; Income in the past 12 months at or above poverty level: - 3 or 4 children
+HD02_VD14,Margin of Error; Income in the past 12 months at or above poverty level: - 3 or 4 children
+HD01_VD15,Estimate; Income in the past 12 months at or above poverty level: - 5 or more children
+HD02_VD15,Margin of Error; Income in the past 12 months at or above poverty level: - 5 or more children

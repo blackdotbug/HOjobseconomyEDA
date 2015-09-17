@@ -1,0 +1,13 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Aggregate income deficit in the past 12 months:
+HD02_VD01,Margin of Error; Aggregate income deficit in the past 12 months:
+HD01_VD02,Estimate; Aggregate income deficit in the past 12 months: - Married-couple family
+HD02_VD02,Margin of Error; Aggregate income deficit in the past 12 months: - Married-couple family
+HD01_VD03,Estimate; Aggregate income deficit in the past 12 months: - Other family:
+HD02_VD03,Margin of Error; Aggregate income deficit in the past 12 months: - Other family:
+HD01_VD04,"Estimate; Aggregate income deficit in the past 12 months: - Other family: - Male householder, no wife present"
+HD02_VD04,"Margin of Error; Aggregate income deficit in the past 12 months: - Other family: - Male householder, no wife present"
+HD01_VD05,"Estimate; Aggregate income deficit in the past 12 months: - Other family: - Female householder, no husband present"
+HD02_VD05,"Margin of Error; Aggregate income deficit in the past 12 months: - Other family: - Female householder, no husband present"

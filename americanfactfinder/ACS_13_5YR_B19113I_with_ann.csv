@@ -1,0 +1,38 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01
+Id,Id2,Geography,Estimate; Median family income in the past 12 months (in 2013 inflation-adjusted dollars),Margin of Error; Median family income in the past 12 months (in 2013 inflation-adjusted dollars)
+0500000US41001,41001,"Baker County, Oregon",15708,11504
+0500000US41003,41003,"Benton County, Oregon",47069,11676
+0500000US41005,41005,"Clackamas County, Oregon",47451,7802
+0500000US41007,41007,"Clatsop County, Oregon",34432,11076
+0500000US41009,41009,"Columbia County, Oregon",41477,25839
+0500000US41011,41011,"Coos County, Oregon",37813,15027
+0500000US41013,41013,"Crook County, Oregon",31920,26102
+0500000US41015,41015,"Curry County, Oregon",62544,36821
+0500000US41017,41017,"Deschutes County, Oregon",34929,6986
+0500000US41019,41019,"Douglas County, Oregon",41500,9181
+0500000US41021,41021,"Gilliam County, Oregon",-,**
+0500000US41023,41023,"Grant County, Oregon",143250,63503
+0500000US41025,41025,"Harney County, Oregon",77857,14460
+0500000US41027,41027,"Hood River County, Oregon",49432,10733
+0500000US41029,41029,"Jackson County, Oregon",37539,3499
+0500000US41031,41031,"Jefferson County, Oregon",33230,4591
+0500000US41033,41033,"Josephine County, Oregon",35833,4335
+0500000US41035,41035,"Klamath County, Oregon",29679,5369
+0500000US41037,41037,"Lake County, Oregon",41727,33445
+0500000US41039,41039,"Lane County, Oregon",41460,4569
+0500000US41041,41041,"Lincoln County, Oregon",51127,10619
+0500000US41043,41043,"Linn County, Oregon",27043,4883
+0500000US41045,41045,"Malheur County, Oregon",33656,4915
+0500000US41047,41047,"Marion County, Oregon",37620,3019
+0500000US41049,41049,"Morrow County, Oregon",36944,12539
+0500000US41051,41051,"Multnomah County, Oregon",36431,3559
+0500000US41053,41053,"Polk County, Oregon",47035,11812
+0500000US41055,41055,"Sherman County, Oregon",18750,38819
+0500000US41057,41057,"Tillamook County, Oregon",39688,26217
+0500000US41059,41059,"Umatilla County, Oregon",42767,7112
+0500000US41061,41061,"Union County, Oregon",32837,5188
+0500000US41063,41063,"Wallowa County, Oregon",41563,27070
+0500000US41065,41065,"Wasco County, Oregon",32438,7849
+0500000US41067,41067,"Washington County, Oregon",40953,2420
+0500000US41069,41069,"Wheeler County, Oregon",49583,10885
+0500000US41071,41071,"Yamhill County, Oregon",40230,4044

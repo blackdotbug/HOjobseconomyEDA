@@ -1,0 +1,38 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD01_VD03,HD01_VD04,HD01_VD05,HD01_VD06,HD01_VD07,HD01_VD08,HD01_VD09,HD01_VD11,HD01_VD12,HD01_VD13,HD01_VD14,HD01_VD15,HD01_VD16,HD01_VD17
+Id,Id2,Geography,Estimate; Total:,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - No income imputed,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - Dollar value of zero imputed,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - More than 0 to less than 10 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - 10 to less than 25 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - 25 to less than 50 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - 50 to less than 100 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months below poverty level -- - 100 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - No income imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - Dollar value of zero imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - More than 0 to less than 10 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - 10 to less than 25 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - 25 to less than 50 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - 50 to less than 100 percent of total income for family imputed,Estimate; Percent of family income imputed for families with income in the past 12 months at or above poverty level -- - 100 percent of total income for family imputed
+0500000US41001,41001,"Baker County, Oregon",4603,407,14,0,2,1,14,102,2954,77,97,77,157,185,516
+0500000US41003,41003,"Benton County, Oregon",18698,1385,93,29,50,13,29,180,13653,379,580,309,327,530,1141
+0500000US41005,41005,"Clackamas County, Oregon",101963,4748,352,73,92,120,277,1268,72158,1825,3093,1814,2902,4394,8847
+0500000US41007,41007,"Clatsop County, Oregon",9878,1070,81,3,35,43,22,67,6123,152,321,308,439,454,760
+0500000US41009,41009,"Columbia County, Oregon",13725,984,65,18,8,17,99,81,9775,208,452,282,329,402,1005
+0500000US41011,41011,"Coos County, Oregon",15899,1299,81,61,12,59,61,216,10305,242,316,466,529,960,1292
+0500000US41013,41013,"Crook County, Oregon",6041,560,31,0,0,0,120,170,3659,150,178,114,167,286,606
+0500000US41015,41015,"Curry County, Oregon",6164,328,35,0,0,67,0,48,3958,63,175,183,138,317,852
+0500000US41017,41017,"Deschutes County, Oregon",43353,3697,130,70,103,89,219,381,28468,773,1186,803,1002,2012,4420
+0500000US41019,41019,"Douglas County, Oregon",29217,2991,155,38,81,119,75,542,17921,557,760,483,747,1358,3390
+0500000US41021,41021,"Gilliam County, Oregon",532,27,0,0,0,0,0,3,359,2,7,7,11,53,63
+0500000US41023,41023,"Grant County, Oregon",2126,188,38,10,2,0,11,44,1241,23,132,103,59,66,209
+0500000US41025,41025,"Harney County, Oregon",2158,292,13,0,16,0,0,0,1146,31,92,55,72,176,265
+0500000US41027,41027,"Hood River County, Oregon",5453,271,12,0,0,0,0,81,4022,124,192,79,165,181,326
+0500000US41029,41029,"Jackson County, Oregon",53998,5039,242,132,136,263,130,889,34440,836,1260,1502,1346,2954,4829
+0500000US41031,41031,"Jefferson County, Oregon",5506,486,35,34,30,52,34,153,2720,46,261,179,147,436,893
+0500000US41033,41033,"Josephine County, Oregon",22009,2494,198,46,12,88,42,277,12548,491,456,430,485,1404,3038
+0500000US41035,41035,"Klamath County, Oregon",18313,2106,43,66,16,84,115,199,11779,328,377,367,392,771,1670
+0500000US41037,41037,"Lake County, Oregon",2148,165,21,23,0,0,65,30,1344,51,80,49,50,44,226
+0500000US41039,41039,"Lane County, Oregon",86248,8210,446,145,111,254,321,929,58436,1569,2434,1496,1872,3007,7018
+0500000US41041,41041,"Lincoln County, Oregon",13045,1023,34,34,18,67,75,220,8282,218,392,290,396,617,1379
+0500000US41043,41043,"Linn County, Oregon",30845,2877,102,66,53,49,149,587,20435,813,871,584,715,1044,2500
+0500000US41045,41045,"Malheur County, Oregon",6879,1010,12,93,3,19,79,162,3967,79,182,165,151,233,724
+0500000US41047,41047,"Marion County, Oregon",78306,8448,197,286,113,384,436,1336,50662,1498,2094,1550,2294,3356,5652
+0500000US41049,41049,"Morrow County, Oregon",2811,344,0,10,2,0,8,70,1633,32,84,80,104,147,297
+0500000US41051,41051,"Multnomah County, Oregon",166106,16234,593,361,322,288,848,1968,115196,3042,4300,2974,3680,6295,10005
+0500000US41053,41053,"Polk County, Oregon",19535,1634,63,52,56,157,74,204,13680,431,667,386,441,592,1098
+0500000US41055,41055,"Sherman County, Oregon",484,48,0,2,1,3,2,6,303,7,6,7,26,28,45
+0500000US41057,41057,"Tillamook County, Oregon",6575,571,12,13,0,28,10,49,4563,111,159,130,199,221,509
+0500000US41059,41059,"Umatilla County, Oregon",18424,1633,108,39,67,70,62,441,10943,269,729,644,693,966,1760
+0500000US41061,41061,"Union County, Oregon",6763,527,76,50,0,0,30,123,4304,101,324,165,124,346,593
+0500000US41063,41063,"Wallowa County, Oregon",1847,124,8,0,0,19,0,46,1034,34,60,62,93,87,280
+0500000US41065,41065,"Wasco County, Oregon",6484,464,43,27,1,24,14,115,4380,170,138,83,262,259,504
+0500000US41067,41067,"Washington County, Oregon",135468,8730,357,243,206,170,223,1245,101379,2568,3319,2027,2388,4421,8192
+0500000US41069,41069,"Wheeler County, Oregon",410,39,0,2,2,0,0,12,232,1,16,20,8,21,57
+0500000US41071,41071,"Yamhill County, Oregon",24954,2136,52,68,0,37,21,169,17502,405,497,496,691,997,1883

@@ -1,0 +1,17 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Total: - 2-person families
+HD02_VD02,Margin of Error; Total: - 2-person families
+HD01_VD03,Estimate; Total: - 3-person families
+HD02_VD03,Margin of Error; Total: - 3-person families
+HD01_VD04,Estimate; Total: - 4-person families
+HD02_VD04,Margin of Error; Total: - 4-person families
+HD01_VD05,Estimate; Total: - 5-person families
+HD02_VD05,Margin of Error; Total: - 5-person families
+HD01_VD06,Estimate; Total: - 6-person families
+HD02_VD06,Margin of Error; Total: - 6-person families
+HD01_VD07,Estimate; Total: - 7-or-more-person families
+HD02_VD07,Margin of Error; Total: - 7-or-more-person families

@@ -1,0 +1,11 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD01_VD03,Estimate; Percent of income imputed -- - No income imputed
+HD01_VD04,Estimate; Percent of income imputed -- - Dollar value of zero imputed
+HD01_VD05,Estimate; Percent of income imputed -- - More than 0 to less than 10 percent of total income for family imputed
+HD01_VD06,Estimate; Percent of income imputed -- - 10 to less than 25 percent of total income for family imputed
+HD01_VD07,Estimate; Percent of income imputed -- - 25 to less than 50 percent of total income for family imputed
+HD01_VD08,Estimate; Percent of income imputed -- - 50 to less than 100 percent of total income for family imputed
+HD01_VD09,Estimate; Percent of income imputed -- - 100 percent of total income for family imputed

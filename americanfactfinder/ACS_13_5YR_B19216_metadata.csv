@@ -1,0 +1,33 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Aggregate nonfamily household income in the past 12 months (in 2013 inflation-adjusted dollars):
+HD02_VD01,Margin of Error; Aggregate nonfamily household income in the past 12 months (in 2013 inflation-adjusted dollars):
+HD01_VD02,Estimate; Male householder (dollars):
+HD02_VD02,Margin of Error; Male householder (dollars):
+HD01_VD03,Estimate; Male householder (dollars): - Living alone (dollars):
+HD02_VD03,Margin of Error; Male householder (dollars): - Living alone (dollars):
+HD01_VD04,Estimate; Male householder (dollars): - Living alone (dollars): - Householder 15 to 64 years (dollars)
+HD02_VD04,Margin of Error; Male householder (dollars): - Living alone (dollars): - Householder 15 to 64 years (dollars)
+HD01_VD05,Estimate; Male householder (dollars): - Living alone (dollars): - Householder 65 years and over (dollars)
+HD02_VD05,Margin of Error; Male householder (dollars): - Living alone (dollars): - Householder 65 years and over (dollars)
+HD01_VD06,Estimate; Male householder (dollars): - Not living alone (dollars):
+HD02_VD06,Margin of Error; Male householder (dollars): - Not living alone (dollars):
+HD01_VD07,Estimate; Male householder (dollars): - Not living alone (dollars): - Householder 15 to 64 years (dollars)
+HD02_VD07,Margin of Error; Male householder (dollars): - Not living alone (dollars): - Householder 15 to 64 years (dollars)
+HD01_VD08,Estimate; Male householder (dollars): - Not living alone (dollars): - Householder 65 years and over (dollars)
+HD02_VD08,Margin of Error; Male householder (dollars): - Not living alone (dollars): - Householder 65 years and over (dollars)
+HD01_VD09,Estimate; Female householder (dollars):
+HD02_VD09,Margin of Error; Female householder (dollars):
+HD01_VD10,Estimate; Female householder (dollars): - Living alone (dollars):
+HD02_VD10,Margin of Error; Female householder (dollars): - Living alone (dollars):
+HD01_VD11,Estimate; Female householder (dollars): - Living alone (dollars): - Householder 15 to 64 years (dollars)
+HD02_VD11,Margin of Error; Female householder (dollars): - Living alone (dollars): - Householder 15 to 64 years (dollars)
+HD01_VD12,Estimate; Female householder (dollars): - Living alone (dollars): - Householder 65 years and over (dollars)
+HD02_VD12,Margin of Error; Female householder (dollars): - Living alone (dollars): - Householder 65 years and over (dollars)
+HD01_VD13,Estimate; Female householder (dollars): - Not living alone (dollars):
+HD02_VD13,Margin of Error; Female householder (dollars): - Not living alone (dollars):
+HD01_VD14,Estimate; Female householder (dollars): - Not living alone (dollars): - Householder 15 to 64 years (dollars)
+HD02_VD14,Margin of Error; Female householder (dollars): - Not living alone (dollars): - Householder 15 to 64 years (dollars)
+HD01_VD15,Estimate; Female householder (dollars): - Not living alone (dollars): - Householder 65 years and over (dollars)
+HD02_VD15,Margin of Error; Female householder (dollars): - Not living alone (dollars): - Householder 65 years and over (dollars)

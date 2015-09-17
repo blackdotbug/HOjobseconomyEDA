@@ -1,0 +1,38 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD01_VD03,HD01_VD04,HD01_VD05,HD01_VD06,HD01_VD07,HD01_VD08,HD01_VD09,HD01_VD11,HD01_VD12,HD01_VD13,HD01_VD14,HD01_VD15,HD01_VD16,HD01_VD17
+Id,Id2,Geography,Estimate; Total:,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - No income imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - Dollar value of zero imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - More than 0 to less than 10 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 10 to less than 25 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 25 to less than 50 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 50 to less than 100 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months below poverty level -- - 100 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - No income imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - Dollar value of zero imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - More than 0 to less than 10 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 10 to less than 25 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 25 to less than 50 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 50 to less than 100 percent of total income for individual imputed,Estimate; Percent of income imputed for individuals with income in the past 12 months at or above poverty level -- - 100 percent of total income for individual imputed
+0500000US41001,41001,"Baker County, Oregon",3276,835,49,7,0,0,0,183,1557,36,54,15,32,59,449
+0500000US41003,41003,"Benton County, Oregon",25458,10139,369,0,0,34,69,1702,10366,156,93,67,61,111,2291
+0500000US41005,41005,"Clackamas County, Oregon",65512,10036,864,164,87,46,219,3012,39229,813,469,199,301,725,9348
+0500000US41007,41007,"Clatsop County, Oregon",8254,1484,98,59,0,14,0,265,5030,134,61,39,21,59,990
+0500000US41009,41009,"Columbia County, Oregon",7685,1775,103,10,0,0,20,333,4399,84,12,10,31,69,839
+0500000US41011,41011,"Coos County, Oregon",14673,3667,271,22,22,51,13,1026,7262,297,58,29,56,183,1716
+0500000US41013,41013,"Crook County, Oregon",3885,866,34,0,0,0,0,181,2318,24,36,16,24,33,353
+0500000US41015,41015,"Curry County, Oregon",5868,1437,69,17,0,0,15,292,2614,123,55,21,50,190,985
+0500000US41017,41017,"Deschutes County, Oregon",32442,6121,208,22,18,0,11,1239,19368,360,200,234,211,413,4037
+0500000US41019,41019,"Douglas County, Oregon",21713,5045,402,8,46,20,42,1192,11129,318,163,75,98,320,2855
+0500000US41021,41021,"Gilliam County, Oregon",444,112,0,0,0,0,4,19,220,0,4,6,2,1,76
+0500000US41023,41023,"Grant County, Oregon",1556,366,0,0,0,0,24,92,819,5,8,10,13,21,198
+0500000US41025,41025,"Harney County, Oregon",1156,242,0,0,0,0,1,92,588,0,0,0,25,25,183
+0500000US41027,41027,"Hood River County, Oregon",4854,893,63,0,0,0,0,129,2975,80,12,11,40,67,584
+0500000US41029,41029,"Jackson County, Oregon",44288,10185,718,0,43,24,142,1888,23251,515,181,138,385,801,6017
+0500000US41031,41031,"Jefferson County, Oregon",3596,717,55,0,1,0,10,185,1885,18,71,10,31,74,539
+0500000US41033,41033,"Josephine County, Oregon",17763,4276,424,7,37,9,53,1222,8454,262,83,59,43,213,2621
+0500000US41035,41035,"Klamath County, Oregon",12875,3551,204,11,0,2,16,595,6512,226,28,24,35,205,1466
+0500000US41037,41037,"Lake County, Oregon",1780,428,17,1,0,0,0,136,923,31,24,0,22,12,186
+0500000US41039,41039,"Lane County, Oregon",95632,28331,1673,93,110,78,282,6041,46270,1002,399,322,553,858,9620
+0500000US41041,41041,"Lincoln County, Oregon",10852,2320,129,0,12,14,36,598,5901,114,169,25,103,170,1261
+0500000US41043,41043,"Linn County, Oregon",21752,5228,306,10,10,18,49,1171,12026,263,99,31,160,226,2155
+0500000US41045,41045,"Malheur County, Oregon",5136,2067,73,5,0,2,8,211,2025,46,21,0,32,109,537
+0500000US41047,41047,"Marion County, Oregon",55607,12428,929,5,52,49,74,2461,30587,780,279,124,468,527,6844
+0500000US41049,41049,"Morrow County, Oregon",1531,270,0,0,0,0,0,55,730,15,32,6,0,40,383
+0500000US41051,41051,"Multnomah County, Oregon",221570,45558,2972,329,91,103,421,8559,134577,1938,1022,576,927,1664,22833
+0500000US41053,41053,"Polk County, Oregon",13676,3318,138,10,0,26,28,806,7474,200,49,43,86,30,1468
+0500000US41055,41055,"Sherman County, Oregon",481,120,6,1,0,0,5,55,232,0,2,0,4,14,42
+0500000US41057,41057,"Tillamook County, Oregon",5382,1136,84,3,0,3,0,219,3176,89,5,23,9,59,576
+0500000US41059,41059,"Umatilla County, Oregon",12842,2777,263,19,8,16,22,860,6497,150,226,88,100,121,1695
+0500000US41061,41061,"Union County, Oregon",5344,1635,140,19,32,0,1,273,2370,31,68,4,34,93,644
+0500000US41063,41063,"Wallowa County, Oregon",1462,316,33,25,3,0,0,53,721,21,20,3,7,20,240
+0500000US41065,41065,"Wasco County, Oregon",6185,1810,53,10,0,0,18,327,2716,68,69,14,63,82,955
+0500000US41067,41067,"Washington County, Oregon",101563,16606,901,144,53,37,55,2920,66768,1037,571,290,459,847,10875
+0500000US41069,41069,"Wheeler County, Oregon",259,45,0,0,0,0,0,7,168,0,0,0,0,9,30
+0500000US41071,41071,"Yamhill County, Oregon",15382,3567,165,0,2,19,63,910,8594,153,96,56,43,141,1573

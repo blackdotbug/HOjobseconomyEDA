@@ -1,0 +1,25 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Total: - Less than 10.0 percent
+HD02_VD02,Margin of Error; Total: - Less than 10.0 percent
+HD01_VD03,Estimate; Total: - 10.0 to 14.9 percent
+HD02_VD03,Margin of Error; Total: - 10.0 to 14.9 percent
+HD01_VD04,Estimate; Total: - 15.0 to 19.9 percent
+HD02_VD04,Margin of Error; Total: - 15.0 to 19.9 percent
+HD01_VD05,Estimate; Total: - 20.0 to 24.9 percent
+HD02_VD05,Margin of Error; Total: - 20.0 to 24.9 percent
+HD01_VD06,Estimate; Total: - 25.0 to 29.9 percent
+HD02_VD06,Margin of Error; Total: - 25.0 to 29.9 percent
+HD01_VD07,Estimate; Total: - 30.0 to 34.9 percent
+HD02_VD07,Margin of Error; Total: - 30.0 to 34.9 percent
+HD01_VD08,Estimate; Total: - 35.0 to 39.9 percent
+HD02_VD08,Margin of Error; Total: - 35.0 to 39.9 percent
+HD01_VD09,Estimate; Total: - 40.0 to 49.9 percent
+HD02_VD09,Margin of Error; Total: - 40.0 to 49.9 percent
+HD01_VD10,Estimate; Total: - 50.0 percent or more
+HD02_VD10,Margin of Error; Total: - 50.0 percent or more
+HD01_VD11,Estimate; Total: - Not computed
+HD02_VD11,Margin of Error; Total: - Not computed
