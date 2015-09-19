@@ -25,3 +25,10 @@ library(tidyr)
 d131ss <-dplyr::select(d131s, 4:53)
 ##tidyr::gather(d131ss)
 summary(d131ss)
+write.csv(d131ss, file = "d131ss.csv")
+##let us try one more
+d8202 <-(ACS_13_1YR_B08202_with_ann)
+d8202s <-(dplyr::slice(d8202, 2:12))
+d8202ss <-dplyr::select(d8202s, contains("H"))
+##the order has not changed county names will line up
+write.csv(d8202ss, file = "d8202ss.csv")
