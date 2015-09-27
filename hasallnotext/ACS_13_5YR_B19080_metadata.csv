@@ -1,0 +1,13 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD02,Estimate; Quintile Upper Limits: - Lowest Quintile
+HD02_VD02,Margin of Error; Quintile Upper Limits: - Lowest Quintile
+HD01_VD03,Estimate; Quintile Upper Limits: - Second Quintile
+HD02_VD03,Margin of Error; Quintile Upper Limits: - Second Quintile
+HD01_VD04,Estimate; Quintile Upper Limits: - Third Quintile
+HD02_VD04,Margin of Error; Quintile Upper Limits: - Third Quintile
+HD01_VD05,Estimate; Quintile Upper Limits: - Fourth Quintile
+HD02_VD05,Margin of Error; Quintile Upper Limits: - Fourth Quintile
+HD01_VD06,Estimate; Lower Limit of Top 5 Percent
+HD02_VD06,Margin of Error; Lower Limit of Top 5 Percent
