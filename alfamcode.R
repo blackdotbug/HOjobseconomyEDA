@@ -4,6 +4,11 @@ d131 <- (ACS_13_1YR_B05010_with_ann)
 
 #only import and work with the files that have all counties in the data. Sort first, please. -HO
 dS1702 <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/americanfactfinder/haseverycounty/ACS_13_5YR_S1702_with_ann.csv", header=TRUE, stringsAsFactors=FALSE)
+dS1101 <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/americanfactfinder/raiseeffectcandidates/ACS_13_5YR_S1101_with_ann.csv", header=TRUE, stringsAsFactors=FALSE)
+dB19131 <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/americanfactfinder/raiseeffectcandidates/ACS_13_5YR_B19131_with_ann.csv", header=TRUE, stringsAsFactors=FALSE)
+dB08202 <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/americanfactfinder/raiseeffectcandidates/ACS_13_5YR_B08202_with_ann.csv", header=TRUE, stringsAsFactors=FALSE)
+dB23009 <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/americanfactfinder/raiseeffectcandidates/ACS_13_5YR_B23009_with_ann.csv", header=TRUE, stringsAsFactors=FALSE)
+dB19126 <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/americanfactfinder/raiseeffectcandidates/ACS_13_5YR_B19126_with_ann.csv", header=TRUE, stringsAsFactors=FALSE)
 
 # not the most useful
 summary(d131)
@@ -34,16 +39,42 @@ d131ss <-dplyr::select(d131s, 4:53)
 
 ## subset to remove the first and third columns -HO
 dS1702s <- subset(dS1702, select=-c(GEO.id, GEO.display.label))
+dS1101s <- subset(dS1101, select=-c(GEO.id, GEO.display.label))
+dB19131s <- subset(dB19131, select=-c(GEO.id, GEO.display.label))
+dB08202s <- subset(dB08202, select=-c(GEO.id, GEO.display.label))
+dB23009s <- subset(dB23009, select=-c(GEO.id, GEO.display.label))
+dB19126s <- subset(dB19126, select=-c(GEO.id, GEO.display.label))
 
 ## then subset again to remove all the margin of error columns -HO
 strng <- "_MOE_"
 dS1702s <- dS1702s[, -grep(strng, colnames(dS1702s))]
+dS1101s <- dS1101s[, -grep(strng, colnames(dS1101s))]
+
+## get rid of MoE columns using ID row. -HO
+string <- "Margin of Error"
+dB19131s <- dB19131s[, -grep(string, dB19131s[1,])]
+dB08202s <- dB08202s[, -grep(string, dB08202s[1,])]
+dB23009s <- dB23009s[, -grep(string, dB23009s[1,])]
+dB19126s <- dB19126s[, -grep(string, dB19126s[1,])]
+
+## change the name of the first column to FIPS
+colnames(dS1101s)[1] <- "fips"
+colnames(dS1702s)[1] <- "fips"
+colnames(dB19131s)[1] <- "fips"
+colnames(dB08202s)[1] <- "fips"
+colnames(dB23009s)[1] <- "fips"
+colnames(dB19126s)[1] <- "fips"
 
 ##tidyr::gather(d131ss)
 summary(d131ss)
 write.csv(d131ss, file = "d131ss.csv")
 
-write.csv(dS1702s, file = "dS1702s.csv")
+write.csv(dS1702s, file = "dbV2/dS1702s.csv")
+write.csv(dS1101s, file = "dbV2/dS1101s.csv")
+write.csv(dB19131s, file = "dbV2/dB19131s.csv")
+write.csv(dB08202s, file = "dbV2/dB08202s.csv")
+write.csv(dB23009s, file = "dbV2/dB23009s.csv")
+write.csv(dB19126s, file = "dbV2/dB19126s.csv")
 
 ##let us try one more
 d8202 <-(ACS_13_1YR_B08202_with_ann)
