@@ -76,6 +76,9 @@ write.csv(dB08202s, file = "dbV2/dB08202s.csv")
 write.csv(dB23009s, file = "dbV2/dB23009s.csv")
 write.csv(dB19126s, file = "dbV2/dB19126s.csv")
 
+censusFamily <- c("HD01_VD3", "HD01_DV37", "HD0_VD39+HD0_VD74")
+sssFamily <- c("a2i0p0s0t1", "a1i0p0s0t0", "a1i0p0s2t0")
+
 ##let us try one more
 d8202 <-(ACS_13_1YR_B08202_with_ann)
 d8202s <-(dplyr::slice(d8202, 2:12))
