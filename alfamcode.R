@@ -21,7 +21,12 @@ B19131 <- rbind(B19131_OR[2,],B19131_county[2:37,])
 # only keep the columns we need.
 
 # S1101: geo.id2 = fips, HC01_EST_VC02 = total households
-S1101s1 <- subset(S1101, select=c(GEO.id2, HC01_EST_VC02))
+S1101s1 <- subset(S1101, select=c(GEO.id2, HC01_EST_VC02, HC02_EST_VC02, HC05_EST_VC02))
+colnames(S1101s1) <- c("fips","totalHouseholds","totalMarriedFamilyHouseholds","totalNonFamilyHouseholds")
+S1101s1$totalHouseholds <- as.numeric(S1101s1$totalHouseholds)
+S1101s1$totalMarriedFamilyHouseholds <- as.numeric(S1101s1$totalMarriedFamilyHouseholds)
+S1101s1$totalNonFamilyHouseholds <- as.numeric(S1101s1$totalNonFamilyHouseholds)
+S1101s1["totalUnmarriedFamilyHouseholds"] <- S1101s1$totalHouseholds - (S1101s1$totalMarriedFamilyHouseholds + S1101s1$totalNonFamilyHouseholds)
 
 # B19201: geo.id2 = fips, HD01_VD02,HD01_VD03,HD01_VD04 = lowIncomeSingleAdults
 B19201s1 <- subset(B19201, select=c(GEO.id2))
@@ -41,13 +46,22 @@ B19131s1["lowIncomeMarriedParents"] <- as.numeric(B19131$HD01_VD04)+as.numeric(B
 ## B19131 <- B19131[, -grep(string, dB19131s[1,])]
 
 # change the names of the columns
-colnames(S1101s1) <- c("fips","totalHouseholds")
 colnames(B19131s1)[1] <- "fips"
 colnames(B19201s1)[1] <- "fips"
 
 # merge columns into one dataframe
 censusHouseholds <- merge(S1101s1,B19131s1,by="fips")
 censusHouseholds <- merge(censusHouseholds,B19201s1,by="fips")
+
+censusHouseholds["marriedAsPercentTotal"] <- censusHouseholds$totalMarriedFamilyHouseholds/censusHouseholds$totalHouseholds
+censusHouseholds["lowIncomeMarriedAsPercentTotal"] <- censusHouseholds$lowIncomeMarriedParents/censusHouseholds$totalHouseholds
+censusHouseholds["lowIncomeMarriedAsPercentMarried"] <- censusHouseholds$lowIncomeMarriedParents/censusHouseholds$totalMarriedFamilyHouseholds
+censusHouseholds["unmarriedAsPercentTotal"] <- censusHouseholds$totalUnmarriedFamilyHouseholds/censusHouseholds$totalHouseholds
+censusHouseholds["lowIncomeSingleParentsAsPercentTotal"] <- censusHouseholds$lowIncomeSingleParents/censusHouseholds$totalHouseholds
+censusHouseholds["lowIncomeSingleParentsAsPercentUnmarried"] <- censusHouseholds$lowIncomeSingleParents/censusHouseholds$totalUnmarriedFamilyHouseholds
+censusHouseholds["nonfamilyAsPercentTotal"] <- censusHouseholds$totalNonFamilyHouseholds/censusHouseholds$totalHouseholds
+censusHouseholds["lowIncomeSingleAdultAsPercentTotal"] <- censusHouseholds$lowIncomeSingleAdults/censusHouseholds$totalHouseholds
+censusHouseholds["lowIncomeSingleAdultAsPercentNonfamily"] <- censusHouseholds$lowIncomeSingleAdults/censusHouseholds$totalNonFamilyHouseholds
 
 # write csv
 write.csv(censusHouseholds, file = "dbV2/censusHouseholds.csv")
