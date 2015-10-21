@@ -67,123 +67,147 @@ censusHouseholds["lowIncomeSingleAdultAsPercentNonfamily"] <- censusHouseholds$l
 write.csv(censusHouseholds, file = "dbV2/censusHouseholds.csv")
 
 # import dataframe of family codes by fips code
-familyCodeByFIPS <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/familyCodeWeights.csv", header=FALSE, stringsAsFactors=FALSE)
+familyCodeByFIPS <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/familyCodeWeights.csv", header=TRUE, stringsAsFactors=FALSE)
 
 # subset S1101 keeping percentages of age of own children stats by family type
-S1101s2 <- subset(S1101, select=c(GEO.id2,HC02_EST_VC11,HC02_EST_VC12,HC02_EST_VC13))
-S1101s2$HC02_EST_VC11 <- as.numeric(S1101s2$HC02_EST_VC11)/100
-S1101s2$HC02_EST_VC12 <- as.numeric(S1101s2$HC02_EST_VC12)/100
-S1101s2$HC02_EST_VC13 <- as.numeric(S1101s2$HC02_EST_VC13)/100
+
+S1101s2 <- subset(S1101, select=c(GEO.id2,HC02_EST_VC11,HC02_EST_VC12,HC02_EST_VC13,HC03_EST_VC11,HC04_EST_VC11,HC03_EST_VC12,HC04_EST_VC12,HC03_EST_VC13,HC04_EST_VC13,HC03_EST_VC10,HC04_EST_VC10))
+S1101s2$marriedUnder6 <- as.numeric(S1101s2$HC02_EST_VC11)/100
+S1101s2$marriedOver6 <- as.numeric(S1101s2$HC02_EST_VC13)/100
+S1101s2$marriedBoth <- as.numeric(S1101s2$HC02_EST_VC12)/100
+S1101s2$maleUnder6 <- as.numeric(S1101s2$HC03_EST_VC11)/100
+S1101s2$maleOver6 <- as.numeric(S1101s2$HC03_EST_VC13)/100
+S1101s2$maleBoth <- as.numeric(S1101s2$HC03_EST_VC12)/100
+S1101s2$femaleUnder6 <- as.numeric(S1101s2$HC04_EST_VC11)/100
+S1101s2$femaleOver6 <- as.numeric(S1101s2$HC04_EST_VC13)/100
+S1101s2$femaleBoth <- as.numeric(S1101s2$HC04_EST_VC12)/100
+S1101s2$totalSingleMale <- as.numeric(S1101s2$HC03_EST_VC10)
+S1101s2$totalSingleFemale <- as.numeric(S1101s2$HC04_EST_VC10)
+S1101s2$totalUnmarried <- S1101s2$totalSingleMale + S1101s2$totalSingleFemale
+S1101s2$percentSingleMale <- S1101s2$totalSingleMale / S1101s2$totalUnmarried
+S1101s2$percentSingleFemale <- S1101s2$totalSingleFemale / S1101s2$totalUnmarried
+S1101s2$maleUnder6 <- S1101s2$maleUnder6 * S1101s2$percentSingleMale
+S1101s2$maleOver6 <- S1101s2$maleOver6 * S1101s2$percentSingleMale
+S1101s2$maleBoth <- S1101s2$maleBoth * S1101s2$percentSingleMale
+S1101s2$femaleUnder6 <- S1101s2$femaleUnder6 * S1101s2$percentSingleFemale
+S1101s2$femaleOver6 <- S1101s2$femaleOver6 * S1101s2$percentSingleFemale
+S1101s2$femaleBoth <- S1101s2$femaleBoth * S1101s2$percentSingleFemale
+S1101s2$unmarriedUnder6 <- S1101s2$maleUnder6 + S1101s2$femaleUnder6
+S1101s2$unmarriedOver6 <- S1101s2$maleOver6 + S1101s2$femaleOver6
+S1101s2$unmarriedBoth <- S1101s2$maleBoth + S1101s2$femaleBoth
+
 
 # add column names
-colnames(familyCodeByFIPS) <- c("familyCode","fips","weightChildAge")
+# colnames(familyCodeByFIPS) <- c("familyCode","fips","weightChildAge")
 colnames(S1101s2)[1] <- "fips"
 
 # combine census stats with family code file, factor family codes, and split data frame by family code
-familyCodeByFIPS <- merge(familyCodeByFIPS, S1101s2, by="fips")
+familyCodeByFIPS <- merge(familyCodeByFIPS[,c("fips","familyCode","ageAdjustment")], S1101s2[, c("fips","marriedUnder6","marriedOver6","marriedBoth","unmarriedUnder6","unmarriedOver6","unmarriedBoth")], by="fips")
 familyCodeByFIPS$familyCode <- as.factor(familyCodeByFIPS$familyCode)
 familyTypes <- split(familyCodeByFIPS, familyCodeByFIPS$familyCode)
+
+write.csv(familyCodeByFIPS, file = "dbV2/familyCodeByFIPS.csv")
 
 # calculate weight for given family code
 
 # a1i0p0s0t2
 familyType01 <- familyTypes[[1]]
-familyType01$weight <- (1-familyType01$HC02_EST_VC13)*familyType01$weightChildAge
+familyType01$weight <- familyType01$unmarriedOver6 * familyType01$ageAdjustment
 familyType01 <- subset(familyType01, select = c(fips, familyCode, weight))
 
 # a1i0p0s1t1
 familyType02 <- familyTypes[[2]]
-familyType02$weight <- (1-familyType02$HC02_EST_VC13)*familyType02$weightChildAge
+familyType02$weight <- familyType02$unmarriedOver6 * familyType02$ageAdjustment
 familyType02 <- subset(familyType02, select = c(fips, familyCode, weight))
 
 # a1i0p0s2t0
 familyType03 <- familyTypes[[3]]
-familyType03$weight <- (1-familyType03$HC02_EST_VC13)*familyType03$weightChildAge
+familyType03$weight <- familyType03$unmarriedOver6 * familyType03$ageAdjustment
 familyType03 <- subset(familyType03, select = c(fips, familyCode, weight))
 
 # a1i0p1s0t1
 familyType04 <- familyTypes[[4]]
-familyType04$weight <- (1-familyType04$HC02_EST_VC13)*familyType04$weightChildAge
+familyType04$weight <- familyType04$unmarriedBoth * familyType04$ageAdjustment
 familyType04 <- subset(familyType04, select = c(fips, familyCode, weight))
 
 # a1i0p1s1t0
 familyType05 <- familyTypes[[5]]
-familyType05$weight <- (1-familyType05$HC02_EST_VC13)*familyType05$weightChildAge
+familyType05$weight <- familyType05$unmarriedBoth * familyType05$ageAdjustment
 familyType05 <- subset(familyType05, select = c(fips, familyCode, weight))
 
 # a1i0p2s0t0
 familyType06 <- familyTypes[[6]]
-familyType06$weight <- (1-familyType06$HC02_EST_VC13)*familyType06$weightChildAge
+familyType06$weight <- familyType06$unmarriedUnder6 * familyType06$ageAdjustment
 familyType06 <- subset(familyType06, select = c(fips, familyCode, weight))
 
 # a1i1p0s0t1
 familyType07 <- familyTypes[[7]]
-familyType07$weight <- (1-familyType07$HC02_EST_VC13)*familyType07$weightChildAge
+familyType07$weight <- familyType07$unmarriedBoth * familyType07$ageAdjustment
 familyType07 <- subset(familyType07, select = c(fips, familyCode, weight))
 
 # a1i1p0s1t0
 familyType08 <- familyTypes[[8]]
-familyType08$weight <- (1-familyType08$HC02_EST_VC13)*familyType08$weightChildAge
+familyType08$weight <- familyType08$unmarriedBoth * familyType08$ageAdjustment
 familyType08 <- subset(familyType08, select = c(fips, familyCode, weight))
 
 # a1i1p1s0t0
 familyType09 <- familyTypes[[9]]
-familyType09$weight <- (1-familyType09$HC02_EST_VC13)*familyType09$weightChildAge
+familyType09$weight <- familyType09$unmarriedUnder6 * familyType09$ageAdjustment
 familyType09 <- subset(familyType09, select = c(fips, familyCode, weight))
 
 # a1i2p0s0t0
 familyType10 <- familyTypes[[10]]
-familyType10$weight <- (1-familyType10$HC02_EST_VC13)*familyType10$weightChildAge
+familyType10$weight <- familyType10$unmarriedUnder6 * familyType10$ageAdjustment
 familyType10 <- subset(familyType10, select = c(fips, familyCode, weight))
 
 # a2i0p0s0t2
 familyType11 <- familyTypes[[11]]
-familyType11$weight <- familyType11$HC02_EST_VC11*familyType11$weightChildAge
+familyType11$weight <- familyType11$marriedOver6 * familyType11$ageAdjustment
 familyType11 <- subset(familyType11, select = c(fips, familyCode, weight))
 
 # a2i0p0s1t1
 familyType12 <- familyTypes[[12]]
-familyType12$weight <- familyType12$HC02_EST_VC11*familyType12$weightChildAge
+familyType12$weight <- familyType12$marriedOver6 * familyType12$ageAdjustment
 familyType12 <- subset(familyType12, select = c(fips, familyCode, weight))
 
 # a2i0p0s2t0
 familyType13 <- familyTypes[[13]]
-familyType13$weight <- familyType13$HC02_EST_VC11*familyType13$weightChildAge
+familyType13$weight <- familyType13$marriedOver6 * familyType13$ageAdjustment
 familyType13 <- subset(familyType13, select = c(fips, familyCode, weight))
 
 # a2i0p1s0t1
 familyType14 <- familyTypes[[14]]
-familyType14$weight <- familyType14$HC02_EST_VC11*familyType14$weightChildAge
+familyType14$weight <- familyType14$marriedBoth * familyType14$ageAdjustment
 familyType14 <- subset(familyType14, select = c(fips, familyCode, weight))
 
 # a2i0p1s1t0
 familyType15 <- familyTypes[[15]]
-familyType15$weight <- familyType15$HC02_EST_VC11*familyType15$weightChildAge
+familyType15$weight <- familyType15$marriedBoth * familyType15$ageAdjustment
 familyType15 <- subset(familyType15, select = c(fips, familyCode, weight))
 
 # a2i0p2s0t0
 familyType16 <- familyTypes[[16]]
-familyType16$weight <- familyType16$HC02_EST_VC11*familyType16$weightChildAge
+familyType16$weight <- familyType16$marriedUnder6 * familyType16$ageAdjustment
 familyType16 <- subset(familyType16, select = c(fips, familyCode, weight))
 
 # a2i1p0s0t1
 familyType17 <- familyTypes[[17]]
-familyType17$weight <- familyType17$HC02_EST_VC11*familyType17$weightChildAge
+familyType17$weight <- familyType17$marriedBoth * familyType17$ageAdjustment
 familyType17 <- subset(familyType17, select = c(fips, familyCode, weight))
 
 # a2i1p0s1t0
 familyType18 <- familyTypes[[18]]
-familyType18$weight <- familyType18$HC02_EST_VC11*familyType18$weightChildAge
+familyType18$weight <- familyType18$marriedBoth * familyType18$ageAdjustment
 familyType18 <- subset(familyType18, select = c(fips, familyCode, weight))
 
 # a2i1p1s0t0
 familyType19 <- familyTypes[[19]]
-familyType19$weight <- familyType19$HC02_EST_VC11*familyType19$weightChildAge
+familyType19$weight <- familyType19$marriedUnder6 * familyType19$ageAdjustment
 familyType19 <- subset(familyType19, select = c(fips, familyCode, weight))
 
 # a2i2p0s0t0
 familyType20 <- familyTypes[[20]]
-familyType20$weight <- familyType20$HC02_EST_VC11*familyType20$weightChildAge
+familyType20$weight <- familyType20$marriedUnder6 * familyType20$ageAdjustment
 familyType20 <- subset(familyType20, select = c(fips, familyCode, weight))
 
 familyCodeWeights <- rbind_list(familyType20,familyType19,familyType18,familyType17,familyType16,familyType15,familyType14,familyType13,familyType12,familyType11,familyType10,familyType09,familyType08,familyType07,familyType06,familyType05,familyType04,familyType03,familyType02,familyType01)
