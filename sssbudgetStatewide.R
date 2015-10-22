@@ -3,7 +3,6 @@ sssbudget <- read.csv("~/Documents/hackoregon/csvs/sssbudget.csv")
 censusHouseholds <- read.csv("~/Documents/hackoregon/CensusData/HOjobseconomyEDA/dbV2/censusHouseholds.csv", stringsAsFactors=FALSE)
 households41 <- as.numeric(censusHouseholds[1,c("totalHouseholds")])
 censusHouseholds$countyWeight <- censusHouseholds$totalHouseholds/households41
-displayedTypes <- c("a1i0p0s0t0","a1i2p0s0t0","a1i1p1s0t0","a1i1p0s1t0","a1i1p0s0t1","a1i0p2s0t0","a1i0p1s1t0","a1i0p1s0t1","a1i0p0s2t0","a1i0p0s1t1","a1i0p0s0t2","a2i2p0s0t0","a2i1p1s0t0","a2i1p0s1t0","a2i1p0s0t1","a2i0p2s0t0","a2i0p1s1t0","a2i0p1s0t1","a2i0p0s2t0","a2i0p0s1t1","a2i0p0s0t2")
 sssbudget$familycode <- as.factor(sssbudget$familycode)
 familycodes <- sssbudget$familycode
 familyTypes <- split(sssbudget, sssbudget$familycode)
@@ -53,6 +52,20 @@ miscellaneous <- as.data.frame(miscellaneousWM)
 miscellaneous <- as.data.frame(t(miscellaneous))
 sssbudgetOR$miscellaneous <- unlist(miscellaneous)
 
-sssbudgetORdislayed <- sssbudgetOR[sssbudgetOR$familyCode %in% displayedTypes,]
+singleParentSubtypes <- c("a1i2p0s0t0","a1i1p1s0t0","a1i1p0s1t0","a1i1p0s0t1","a1i0p2s0t0","a1i0p1s1t0","a1i0p1s0t1","a1i0p0s2t0","a1i0p0s1t1","a1i0p0s0t2")
+marriedParentSubtypes <- c("a2i2p0s0t0","a2i1p1s0t0","a2i1p0s1t0","a2i1p0s0t1","a2i0p2s0t0","a2i0p1s1t0","a2i0p1s0t1","a2i0p0s2t0","a2i0p0s1t1","a2i0p0s0t2")
 
-write.csv(sssbudgetORdislayed, file = "dbV2/sssbudgetORdisplayed.csv")
+sssbudgetSingleAdult <- sssbudgetOR[sssbudgetOR$familyCode == "a1i0p0s0t0", 2:8]
+write.csv(sssbudgetSingleAdult, file = "dbV2/sssbudgetSingleAdultOR.csv")
+
+sssbudgetSingleParent <- sssbudgetOR[sssbudgetOR$familyCode %in% singleParentSubtypes,]
+singleParentWeights <- data.frame(familyCode = c("a1i2p0s0t0", "a1i1p1s0t0", "a1i1p0s1t0", "a1i1p0s0t1", "a1i0p2s0t0", "a1i0p1s1t0", "a1i0p1s0t1", "a1i0p0s2t0", "a1i0p0s1t1", "a1i0p0s0t2"), weight = c(0.057406744, 0.114813488, 0.04326598, 0.03709431, 0.057406744, 0.04326598, 0.03709431, 0.176738244, 0.302997265, 0.129855971))
+sssbudgetSingleParent <- merge(sssbudgetSingleParent, singleParentWeights, by="familyCode")
+sssbudgetSingleParentOR <- lapply(sssbudgetSingleParent[,2:8], weighted.mean, w = sssbudgetSingleParent$weight)
+write.csv(sssbudgetSingleParentOR, file = "dbV2/sssbudgetSingleParentOr.csv")
+
+sssbudgetMarriedParents <- sssbudgetOR[sssbudgetOR$familyCode %in% marriedParentSubtypes,]
+marriedParentWeights <- data.frame(familyCode = c("a2i2p0s0t0", "a2i1p1s0t0", "a2i1p0s1t0", "a2i1p0s0t1", "a2i0p2s0t0", "a2i0p1s1t0", "a2i0p1s0t1", "a2i0p0s2t0", "a2i0p0s1t1", "a2i0p0s0t2"), weight = c(0.05825, 0.1165, 0.0581472, 0.0498528, 0.05825, 0.0581472, 0.0498528, 0.1597349, 0.273847, 0.117363))
+sssbudgetMarriedParents <- merge(sssbudgetMarriedParents, marriedParentWeights, by="familyCode")
+sssbudgetMarriedParentsOR <- lapply(sssbudgetMarriedParents[,2:8], weighted.mean, w=sssbudgetMarriedParents$weight)
+write.csv(sssbudgetMarriedParentsOR, file = "dbV2/sssbudgetMarriedParentsOr.csv")
